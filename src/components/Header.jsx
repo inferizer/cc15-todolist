@@ -1,5 +1,6 @@
 import { FaHome } from "react-icons/fa";
 import SearchBar from "./Search";
+import "./Header.scss";
 
 function Header () {
     return (
