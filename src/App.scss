@@ -1,0 +1,31 @@
+@import './index.scss';
+$header-height: 100px;
+$sidebar-width: 300px;
+
+.todo{
+    display: grid;
+    grid-template-rows: $header-height calc(100vh - $header-height);  //ค.สูงแถว1 ,ค.สูงที่เหลือ - 60
+    grid-template-columns: $sidebar-width calc(100vw - $sidebar-width);
+
+
+&__header{
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+&__sidebar{
+    // grid-row-start: 2;
+    // grid-row-end: -1;
+    // grid-column-start: 1;
+    // grid-column-end: 2;
+    grid-row: 2/-1;
+    grid-column: 1/2; //2 or span 1
+}
+
+&__content{
+    grid-row-start: 2;
+    grid-row-end: -1;
+    grid-column-start: 2;
+    grid-column-end: -1;
+}
+}
