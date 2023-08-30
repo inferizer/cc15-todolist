@@ -1,5 +1,4 @@
 import "./ListItem.scss"
-import { useState } from "react";
 
 /* props = {
     text : string
