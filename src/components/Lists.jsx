@@ -14,7 +14,7 @@ function Lists (props) {
     return (
         <ul className="list">
             {props.data.map((item)=> (
-                <ListItem key={item.id} {...item}/>
+                <ListItem key={item.id} {...item}/> // spread props
             ))}
         </ul>
     )

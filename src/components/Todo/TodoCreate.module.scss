@@ -1,0 +1,45 @@
+@import "../../index.scss";
+
+.todo__create {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+        color: $primary;
+
+        & .todo__create__icon {
+            background-color: $primary;
+            color: white;
+        }
+
+        & .todo__create__text {
+            color: $primary;
+        }
+
+    }
+
+    &__icon {
+        font-size: 2.4rem;
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 50%;
+        // center
+        // display:flex ;
+        // align-items: center;
+        text-align: center;
+        justify-content: center;
+        line-height: 2.2rem;
+        
+    }
+
+    &__text {
+            color: $grey-dark;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 1.2rem;
+
+   
+    }
+}

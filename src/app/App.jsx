@@ -2,6 +2,9 @@ import "./App.scss";
 import "../components/Header.scss";
 import Header from "../components/Header";
 import Lists from "../components/Lists";
+import TodoHeader from "../components/Todo/TodoHeader";
+import TodoCreate from "../components/Todo/TodoCreate";
+import TodoLists from "../components/Todo/TodoLists";
 // Sidebar
 import { FaInbox, FaCalendar, FaCalendarAlt, FaChevronDown } from 'react-icons/fa';
 
@@ -28,7 +31,6 @@ const projectList =[
         <aside className="sidebar">
           <section className="sidebar__category">
             <Lists data={generalList} />
-
           </section>
           <section className="sidebar__category">
             <div className="accordion">
@@ -45,7 +47,15 @@ const projectList =[
           </section>
         </aside>
       </div>
-      <div className="todo__content">TodoContent</div>
+      <div className="todo__content">
+        <main className="todo__container">
+            <TodoHeader/>
+            {/* Create Todo */}
+            <TodoCreate/>
+            {/* Todolist */}
+            <TodoLists/>
+        </main>
+      </div>
     </div>
   );
 }

@@ -1,8 +1,5 @@
 @import '../index.scss';
 
-$header-height: 100px;
-$sidebar-width: 300px;
-
 .todo{
     display: grid;
     grid-template-rows: $header-height calc(100vh - $header-height);  //ค.สูงแถว1 ,ค.สูงที่เหลือ - 60
@@ -66,5 +63,14 @@ $sidebar-width: 300px;
             font-weight: inherit;
         }
     }
+
+}
+
+
+.todo__container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
 
 }
