@@ -41,7 +41,7 @@ function TodoCreate() {
 
   return (
     <>
-    {isOpenForm ? (<TodoForm/>) :
+    {isOpenForm ? (<TodoForm textSubmit="Add Task"/>) :
     (<div className={styles.todo__create} onClick={hdlClick}>
       <div className={styles.todo__create__button}>
       <HiPlus />
