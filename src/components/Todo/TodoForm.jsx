@@ -16,12 +16,20 @@ SEC - 1 Form hdl
     ## type="submit" 
     ## type="button"
 */
+
 function TodoForm(props) {
   const [isError, setIsError] = useState(false);
-  const [isCancel, setIsCancel] = useState();
+  const [taskInput, setTaskInput] = useState("");
+
+  const hdlChangeInput = (evt) => {
+    setTaskInput(evt.target.value);
+  };
 
   const hldSubmit = (evt) => {
     evt.preventDefault();
+    // FormValidation
+    // Case-A : can submit
+    // Case-B : can't submit => "Title is required"
   };
 
   const hdlCancel = () => {
@@ -31,7 +39,12 @@ function TodoForm(props) {
   return (
     <form onClick={hldSubmit} className={styles.todo__form__container}>
       {/*	Body */}
-      <input className={styles.todo__form__input} placeholder='Task Name' />
+      <input
+        className={styles.todo__form__input}
+        placeholder='Task Name'
+        value={taskInput}
+        onChange={hdlChangeInput}
+      />
 
       {/*Form Footer */}
       <div className={styles.todo__form__footer}>
