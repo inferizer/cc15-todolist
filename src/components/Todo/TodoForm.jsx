@@ -17,10 +17,13 @@ SEC - 1 Form hdl
 */
 function TodoForm(props) {
   const [isError, setIsError] = useState(false);
-  const [] = useState();
+  const [isCancel, setIsCancel] = useState();
+
   const hldSubmit = (evt) => {
     evt.preventDefault();
   };
+
+  const hdlCancel = () => {};
 
   return (
     <form onClick={hldSubmit} className={styles.todo__form__container}>
@@ -35,7 +38,12 @@ function TodoForm(props) {
         ) : null}
 
         <div className={styles.todo__form__buttons}>
-          <Button text='Cancel' type='button' active={false} />
+          <Button
+            text='Cancel'
+            type='button'
+            active={false}
+            onClick={hdlCancel}
+          />
           <Button text={props.textSubmit} type='submit' active={true} />
         </div>
       </div>
