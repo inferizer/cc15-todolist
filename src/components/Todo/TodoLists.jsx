@@ -1,9 +1,22 @@
-import styles from './TodoLists.module.scss';
+import { useState } from 'react';
 import { FaTrashAlt, FaPen } from 'react-icons/fa';
 import { HiOutlineCheck } from 'react-icons/hi';
 
+import styles from './TodoLists.module.scss';
+import TodoForm from './TodoForm';
+
 function TodoLists() {
+  const [isOpenForm,setIsOpenForm] = useState(false)
+
+  const hdlClick = () => {
+    setIsOpenForm(!isOpenForm)
+  }
+
   return (
+    <>
+    {isOpenForm ? (
+    <TodoForm/>
+    ):(
     <ul className={styles.todo__lists}>
       <li className={styles.todo}>
         <div className={`${styles.todo__checkbox} ${styles.todo__checkbox__done}`}>
@@ -13,7 +26,7 @@ function TodoLists() {
         <span className={styles.todo__date}>30 Aug</span>
         <div className={styles.todo__action}>
           <span>
-            <FaPen className={styles.todo__edit} />
+            <FaPen className={styles.todo__edit} onClick={hdlClick} />
           </span>
           <span>
             <FaTrashAlt className={styles.todo__delete} />
@@ -21,6 +34,8 @@ function TodoLists() {
         </div>
       </li>
     </ul>
+    )}
+    </>
   );
 }
 

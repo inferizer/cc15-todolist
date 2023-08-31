@@ -25,6 +25,7 @@ Condition Rendering
 SEC3 - useState, because JS Value can't Render React
       React State (React Hook)
       const [state,setState] = useState(true) 
+      state change : FC have Rerender => new UI
 
 */
 
