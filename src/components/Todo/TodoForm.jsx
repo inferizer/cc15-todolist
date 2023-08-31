@@ -5,6 +5,7 @@ import styles from "./TodoForm.module.scss";
 /*
   props = {
     textSubmit : string
+    setIsOpenForm : f()
   }
 */
 /*
@@ -23,7 +24,9 @@ function TodoForm(props) {
     evt.preventDefault();
   };
 
-  const hdlCancel = () => {};
+  const hdlCancel = () => {
+    props.setIsOpenForm(false);
+  };
 
   return (
     <form onClick={hldSubmit} className={styles.todo__form__container}>
