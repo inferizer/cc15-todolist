@@ -25,8 +25,8 @@ function TodoLists() {
         <p className={`${styles.todo__task} ${styles.todo__task__done}`}>todo-item 1 </p>
         <span className={styles.todo__date}>30 Aug</span>
         <div className={styles.todo__action}>
-          <span>
-            <FaPen className={styles.todo__edit} onClick={hdlClick} />
+          <span onClick={hdlClick}>
+            <FaPen className={styles.todo__edit}/>
           </span>
           <span>
             <FaTrashAlt className={styles.todo__delete} />

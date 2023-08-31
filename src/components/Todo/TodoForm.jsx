@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Button } from '../Common/Button/Button';
 import styles from './TodoForm.module.scss';
 
 function TodoForm() {
@@ -11,8 +11,8 @@ function TodoForm() {
       <div className={styles.todo__form__footer}>
         <p className={styles.todo__error}>Title is required</p>
         <div className={styles.todo__form__buttons}>
-          <button>Cancel</button>
-          <button>Add Task</button>
+          <Button text="Cancel" active={false}/>
+          <Button text="Add Task"/>
         </div>
       </div>
     </form>
