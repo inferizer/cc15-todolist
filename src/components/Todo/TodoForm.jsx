@@ -22,14 +22,20 @@ function TodoForm(props) {
   const [taskInput, setTaskInput] = useState("");
 
   const hdlChangeInput = (evt) => {
+    if (isError) setIsError(false);
     setTaskInput(evt.target.value);
   };
 
   const hldSubmit = (evt) => {
     evt.preventDefault();
-    // FormValidation
+    // User type value (state : taskInput)
+    // # FormValidation
     // Case-A : can submit
-    // Case-B : can't submit => "Title is required"
+    // Case-B : can't submit => Show Error
+    if (taskInput.trim() === "") {
+      setIsError(true);
+    }
+    return;
   };
 
   const hdlCancel = () => {
